@@ -19,6 +19,10 @@ public class User {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "age")
+    @Min(value = 1, message = "Minimal age is 1")
+    private int age;
+
     public Integer getId() {
         return id;
     }
@@ -26,10 +30,6 @@ public class User {
     public void setId(Integer id) {
         this.id = id;
     }
-
-    @Column(name = "age")
-    @Min(value = 1, message = "Minimal age is 1")
-    private int age;
 
     public String getName() {
         return name;
@@ -39,11 +39,11 @@ public class User {
         this.name = name;
     }
 
-    public String getemail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setemail(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
